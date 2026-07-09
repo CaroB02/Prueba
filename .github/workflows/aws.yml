@@ -29,13 +29,13 @@ jobs:
     # 3. Compilación y subida automática del Frontend a tu ECR privado
     - name: Build y Push Frontend a ECR
       run: |
-        docker build -t 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-frontend:latest ./Devops4-main/frontend
+        docker build -t 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-frontend:latest ./Devops4-main/Devops4-main/frontend
         docker push 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-frontend:latest
 
     # 4. Compilación y subida automática del Backend a tu ECR privado
     - name: Build y Push Backend a ECR
       run: |
-        docker build -t 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-backend:latest ./Devops4-main/backend
+        docker build -t 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-backend:latest ./Devops4-main/Devops4-main/backend
         docker push 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-backend:latest
 
     # 5. Despliegue y actualización automática en el clúster express que creó AWS
