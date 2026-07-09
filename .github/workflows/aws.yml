@@ -41,4 +41,4 @@ jobs:
    # 5. Despliegue y actualización automática en el clúster express que creó AWS
     - name: Actualizar Servicio Express en ECS
       run: |
-        aws ecs update-service --cluster cluster-tienda-perritos-1298 --service cluster-tienda-perritos-1298 --force-new-deployment
+        aws ecs update-service --cluster default --service default --force-new-deployment
