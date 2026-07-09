@@ -38,7 +38,7 @@ jobs:
         docker build -t 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-backend:latest ./Devops4-main/Devops4-main/backend
         docker push 974660950724.dkr.ecr.us-east-1.amazonaws.com/tienda-backend:latest
 
-    # 5. Despliegue y actualización automática en el clúster express que creó AWS
+   # 5. Despliegue y actualización automática en el clúster express que creó AWS
     - name: Actualizar Servicio Express en ECS
       run: |
-        aws ecs update-service --cluster cluster-tienda-perritos-1298 --service default/cluster-tienda-perritos-1298 --force-new-deployment
+        aws ecs update-service --cluster cluster-tienda-perritos-1298 --service cluster-tienda-perritos-1298 --force-new-deployment
